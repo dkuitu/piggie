@@ -1,25 +1,34 @@
 # piggie
 PHP lab for special topic
+Getting Started
+Below are the steps to get started with the Piggie project.
 
-Piggie
-Piggie is a PHP lab for a special topic. This repository includes a collection of PHP and Python files that serve as the back-end for a game. The project primarily uses PHP, making up 74.6% of the code, with Python accounting for the remaining 25.4%.
+Prerequisites
+Before you begin, ensure you have met the following requirements:
 
-Structure
-The repository consists of various PHP and Python scripts:
+PHP Environment: You need a web server environment that supports PHP. You can use environments such as XAMPP, WAMP, or MAMP for Windows, Mac, and Linux respectively. Alternatively, you can use a standalone PHP interpreter if you are comfortable configuring it.
 
-play.php: A PHP script that interacts with the game's database to play the game.
-purchase.php: A PHP script that interacts with the game's database to manage purchases within the game.
-start_game.php: A PHP script to start a new game.
-test_redis.php: A PHP script to test the connectivity with Redis.
-database.php: A PHP script for managing the database connection.
-login.php: A PHP script for managing user login.
-redis.php: A PHP script for managing the connection to Redis.
-sim.py: A Python script that interacts with the game's server.
-stats.py: A Python script for performing computations related to the game.
+Python: The project also includes Python scripts. Make sure you have Python3 installed on your machine.
+
+SQL Database: The PHP scripts interact with a SQL database. You should have a SQL database ready for use. MySQL or MariaDB are good options for this.
+
+Redis: Some of the PHP scripts interact with Redis, so you should have a Redis server installed and configured.
+
+Installation
+Clone the repository: First, clone this repository to your local machine using git clone https://github.com/dkuitu/piggie.git.
+
+Configure the Database: Import the SQL structure to your database. Note that this repository does not include a SQL file, so you might need to create your own structure based on the PHP scripts. Update the database.php file with your database connection details.
+
+Configure Redis: Update the redis.php script with your Redis connection details.
+
+Run the Server: If you are using a web server environment like XAMPP, place the repository in the htdocs (or equivalent) directory and start the server. If you are using a standalone PHP interpreter, navigate to the directory containing the repository and start the PHP server using php -S localhost:8000 (or any port of your choice).
+
+Access the Scripts: You can now access the PHP scripts in your browser by visiting localhost:8000/<script_name>.php (replace <script_name> with the name of the script you want to access).
+
+Please note that these scripts are designed to be run on the server side. They will not function properly if opened as local files in a web browser.
+
 Usage
-To use these scripts, you'll need a server that can run PHP, a SQL database, and Python3 installed. The server should also be connected to Redis. You might need to adjust the database and Redis connection details in the PHP scripts.
-
-Please note that this repository is a lab exercise and may not function as a complete game without further modification or integration with a front-end user interface.
+You can use these scripts as a starting point for a web-based game. Each script performs a different function in the game, such as starting a game, making a purchase, or playing a round of the game. You might need to integrate these scripts with a front-end interface to make them usable for end users.
 
 Contributions
 Contributions are welcome. Please fork this repository and create a pull request if you have something you'd like to add or change.
